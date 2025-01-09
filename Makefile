@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp -std=c++17 -ggdb -O2
+	g++ reg.cpp -std=c++17 -ggdb -Ofast

@@ -1,0 +1,2130 @@
+Accuracy of the Decision Tree: 0.7312
+                     Feature  Importance
+12          outstanding_debt    0.174010
+14        credit_history_age    0.098980
+6              interest_rate    0.078811
+10      changed_credit_limit    0.066524
+13  credit_utilization_ratio    0.061128
+5            num_credit_card    0.060600
+15   amount_invested_monthly    0.058018
+16           monthly_balance    0.057146
+9     num_of_delayed_payment    0.056264
+8        delay_from_due_date    0.056257
+3        total_emi_per_month    0.046774
+0                        age    0.042681
+2      monthly_inhand_salary    0.036425
+1              annual_income    0.035647
+4          num_bank_accounts    0.029801
+11      num_credit_inquiries    0.028537
+7                num_of_loan    0.012398
+|--- outstanding_debt <= 1494.48
+|   |--- num_credit_card <= 2.50
+|   |   |--- interest_rate <= 13.50
+|   |   |   |--- monthly_inhand_salary <= 10015.49
+|   |   |   |   |--- monthly_inhand_salary <= 1067.39
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- monthly_inhand_salary >  1067.39
+|   |   |   |   |   |--- monthly_inhand_salary <= 2838.57
+|   |   |   |   |   |   |--- monthly_balance <= 203.49
+|   |   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 209.45
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  209.45
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 194.63
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 15.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  15.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  194.63
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 234.67
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  234.67
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- monthly_balance >  203.49
+|   |   |   |   |   |   |   |--- monthly_balance <= 431.50
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 3.50
+|   |   |   |   |   |   |   |   |   |--- num_of_loan <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 230.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  230.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |--- num_of_loan >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 23.45
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  23.45
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  3.50
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 267.36
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 204.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  204.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  267.36
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 381.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 21
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  381.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |--- monthly_balance >  431.50
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 209.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 203.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  203.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_history_age >  209.50
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- monthly_inhand_salary >  2838.57
+|   |   |   |   |   |   |--- credit_history_age <= 163.00
+|   |   |   |   |   |   |   |--- credit_utilization_ratio <= 36.68
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- credit_utilization_ratio >  36.68
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- credit_history_age >  163.00
+|   |   |   |   |   |   |   |--- age <= 25.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 1196.06
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 1.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 1014.11
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  1014.11
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  1.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 2958.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  2958.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  1196.06
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 347.62
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 4575.33
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  4575.33
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  347.62
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- age >  25.50
+|   |   |   |   |   |   |   |   |--- monthly_balance <= 797.09
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 202.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 3152.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  3152.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  202.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 350.23
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  350.23
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 17
+|   |   |   |   |   |   |   |   |--- monthly_balance >  797.09
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 9.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 86757.45
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  86757.45
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  9.50
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- monthly_inhand_salary >  10015.49
+|   |   |   |   |--- credit_history_age <= 348.50
+|   |   |   |   |   |--- delay_from_due_date <= 13.50
+|   |   |   |   |   |   |--- monthly_balance <= 1092.84
+|   |   |   |   |   |   |   |--- outstanding_debt <= 1239.08
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 36.16
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 781.68
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 120846.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  120846.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  781.68
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  36.16
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 189.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  189.00
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 38.62
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  38.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |--- outstanding_debt >  1239.08
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- monthly_balance >  1092.84
+|   |   |   |   |   |   |   |--- changed_credit_limit <= 4.67
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 201.95
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 207.74
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1387.11
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1387.11
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  207.74
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  201.95
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 1165.12
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  1165.12
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 911.38
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  911.38
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- changed_credit_limit >  4.67
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 7.37
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  7.37
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 104.28
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 36.96
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  36.96
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  104.28
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- delay_from_due_date >  13.50
+|   |   |   |   |   |   |--- annual_income <= 153279.02
+|   |   |   |   |   |   |   |--- monthly_inhand_salary <= 10191.90
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- monthly_inhand_salary >  10191.90
+|   |   |   |   |   |   |   |   |--- interest_rate <= 8.50
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 10582.41
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 345.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  345.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  10582.41
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 623.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  623.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |--- interest_rate >  8.50
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 17.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 144838.72
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  144838.72
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  17.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- annual_income >  153279.02
+|   |   |   |   |   |   |   |--- credit_utilization_ratio <= 33.93
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- credit_utilization_ratio >  33.93
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 38.76
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 652.94
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 38.06
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  38.06
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  652.94
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  38.76
+|   |   |   |   |   |   |   |   |   |--- age <= 18.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 43.79
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  43.79
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- age >  18.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- credit_history_age >  348.50
+|   |   |   |   |   |--- monthly_balance <= 1358.49
+|   |   |   |   |   |   |--- num_credit_inquiries <= 7.50
+|   |   |   |   |   |   |   |--- delay_from_due_date <= 16.50
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 200.48
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 143791.18
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 41.76
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  41.76
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- annual_income >  143791.18
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 1310.79
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  1310.79
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  200.48
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 256.35
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  256.35
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |--- delay_from_due_date >  16.50
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- num_credit_inquiries >  7.50
+|   |   |   |   |   |   |   |--- changed_credit_limit <= 3.91
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 38.87
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  38.87
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 12.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  12.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- changed_credit_limit >  3.91
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- monthly_balance >  1358.49
+|   |   |   |   |   |   |--- class: 1
+|   |   |--- interest_rate >  13.50
+|   |   |   |--- class: 1
+|   |--- num_credit_card >  2.50
+|   |   |--- num_of_delayed_payment <= 7.50
+|   |   |   |--- delay_from_due_date <= 15.50
+|   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |--- interest_rate <= 12.50
+|   |   |   |   |   |   |--- total_emi_per_month <= 142.41
+|   |   |   |   |   |   |   |--- outstanding_debt <= 1473.27
+|   |   |   |   |   |   |   |   |--- delay_from_due_date <= 4.50
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 14648.59
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- annual_income >  14648.59
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 37.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  37.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 18
+|   |   |   |   |   |   |   |   |--- delay_from_due_date >  4.50
+|   |   |   |   |   |   |   |   |   |--- interest_rate <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 53.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 24
+|   |   |   |   |   |   |   |   |   |   |--- age >  53.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |--- interest_rate >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 11.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 27
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  11.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |--- outstanding_debt >  1473.27
+|   |   |   |   |   |   |   |   |--- age <= 48.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 220.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  220.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1490.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1490.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- age >  48.50
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 43789.99
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- annual_income >  43789.99
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 134.29
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  134.29
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- total_emi_per_month >  142.41
+|   |   |   |   |   |   |   |--- monthly_inhand_salary <= 14163.64
+|   |   |   |   |   |   |   |   |--- num_of_loan <= 3.50
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 230.83
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 370.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 19
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  370.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  230.83
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |--- num_of_loan >  3.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 195.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 533.67
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  533.67
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  195.50
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 13.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  13.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |--- monthly_inhand_salary >  14163.64
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 14264.52
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 277.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  277.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 574.76
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  574.76
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  14264.52
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 1361.29
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 14390.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  14390.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  1361.29
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 5.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  5.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- interest_rate >  12.50
+|   |   |   |   |   |   |--- amount_invested_monthly <= 50.95
+|   |   |   |   |   |   |   |--- outstanding_debt <= 122.53
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- outstanding_debt >  122.53
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 49.09
+|   |   |   |   |   |   |   |   |   |--- age <= 14.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- age >  14.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  49.09
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- amount_invested_monthly >  50.95
+|   |   |   |   |   |   |   |--- monthly_balance <= 536.86
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- monthly_balance >  536.86
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 4.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries >  4.50
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 8492.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  8492.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |--- total_emi_per_month <= 463.20
+|   |   |   |   |   |   |--- changed_credit_limit <= 2.02
+|   |   |   |   |   |   |   |--- age <= 18.50
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- age >  18.50
+|   |   |   |   |   |   |   |   |--- interest_rate <= 3.50
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 369.30
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  369.30
+|   |   |   |   |   |   |   |   |   |   |--- age <= 33.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- age >  33.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |--- interest_rate >  3.50
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 1.78
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  1.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  1.78
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- changed_credit_limit >  2.02
+|   |   |   |   |   |   |   |--- delay_from_due_date <= 8.50
+|   |   |   |   |   |   |   |   |--- annual_income <= 15359.38
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 1019.65
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 278.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  278.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  1019.65
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 12.31
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  12.31
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- annual_income >  15359.38
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 16852.74
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- annual_income >  16852.74
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1301.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1301.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |--- delay_from_due_date >  8.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 1475.64
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 117.04
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 17
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  117.04
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 124.35
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  124.35
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  1475.64
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 270.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  270.00
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 271.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  271.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- total_emi_per_month >  463.20
+|   |   |   |   |   |   |--- num_credit_inquiries <= 1.50
+|   |   |   |   |   |   |   |--- num_of_loan <= 1.50
+|   |   |   |   |   |   |   |   |--- monthly_balance <= 693.66
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- monthly_balance >  693.66
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 337.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  337.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- num_of_loan >  1.50
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 13.69
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 35.58
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  35.58
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  13.69
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- num_credit_inquiries >  1.50
+|   |   |   |   |   |   |   |--- credit_utilization_ratio <= 37.32
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- credit_utilization_ratio >  37.32
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 213.00
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_history_age >  213.00
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 37.49
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  37.49
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |--- delay_from_due_date >  15.50
+|   |   |   |   |--- interest_rate <= 12.50
+|   |   |   |   |   |--- num_bank_accounts <= 5.50
+|   |   |   |   |   |   |--- delay_from_due_date <= 19.50
+|   |   |   |   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 5.50
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 11.09
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  11.09
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 344.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  344.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  5.50
+|   |   |   |   |   |   |   |   |   |--- interest_rate <= 11.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 354.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  354.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- interest_rate >  11.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 144.78
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 729.14
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  729.14
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  144.78
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 37309.44
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  37309.44
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 0.73
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  0.73
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- delay_from_due_date >  19.50
+|   |   |   |   |   |   |   |--- changed_credit_limit <= 12.52
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 5.50
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 97.76
+|   |   |   |   |   |   |   |   |   |   |--- age <= 25.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- age >  25.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  97.76
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 242.89
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  242.89
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 17
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  5.50
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 2.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 318.51
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  318.51
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  2.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 13963.16
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  13963.16
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |--- changed_credit_limit >  12.52
+|   |   |   |   |   |   |   |   |--- num_bank_accounts <= 2.50
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 13.41
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  13.41
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- num_bank_accounts >  2.50
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 7.50
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  7.50
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- num_bank_accounts >  5.50
+|   |   |   |   |   |   |--- total_emi_per_month <= 368.55
+|   |   |   |   |   |   |   |--- age <= 52.50
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 360.50
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 3.28
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 18.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  18.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  3.28
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 423.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  423.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |--- credit_history_age >  360.50
+|   |   |   |   |   |   |   |   |   |--- age <= 41.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 46502.53
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  46502.53
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- age >  41.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- age >  52.50
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 28.96
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  28.96
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- total_emi_per_month >  368.55
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- interest_rate >  12.50
+|   |   |   |   |   |--- interest_rate <= 20.50
+|   |   |   |   |   |   |--- num_credit_card <= 7.50
+|   |   |   |   |   |   |   |--- amount_invested_monthly <= 19.00
+|   |   |   |   |   |   |   |   |--- num_credit_card <= 5.00
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- num_credit_card >  5.00
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- amount_invested_monthly >  19.00
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 42.53
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 174.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 39.37
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  39.37
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  174.50
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 19.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  19.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  42.53
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 28.45
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  28.45
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- num_credit_card >  7.50
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- interest_rate >  20.50
+|   |   |   |   |   |   |--- class: 0
+|   |   |--- num_of_delayed_payment >  7.50
+|   |   |   |--- interest_rate <= 20.50
+|   |   |   |   |--- interest_rate <= 4.50
+|   |   |   |   |   |--- delay_from_due_date <= 20.50
+|   |   |   |   |   |   |--- interest_rate <= 1.50
+|   |   |   |   |   |   |   |--- outstanding_debt <= 272.23
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 9.39
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 59.02
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  59.02
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 7.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  7.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  9.39
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 707.37
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 307.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  307.41
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  707.37
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- outstanding_debt >  272.23
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 7.39
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1315.74
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1315.74
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 3.69
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  3.69
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  7.39
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 295.50
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 102.98
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  102.98
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  295.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 3308.13
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  3308.13
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |--- interest_rate >  1.50
+|   |   |   |   |   |   |   |--- monthly_balance <= 663.38
+|   |   |   |   |   |   |   |   |--- age <= 51.50
+|   |   |   |   |   |   |   |   |   |--- num_credit_card <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 388.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  388.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- num_credit_card >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1282.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 24
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1282.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |--- age >  51.50
+|   |   |   |   |   |   |   |   |   |--- num_credit_card <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1187.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1187.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- num_credit_card >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |--- monthly_balance >  663.38
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 3.50
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 1.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 32.24
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  32.24
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  1.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 174867.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  174867.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries >  3.50
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 296.99
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 39.53
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  39.53
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  296.99
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 14304.13
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  14304.13
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- delay_from_due_date >  20.50
+|   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 262.89
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 45.11
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 15.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  15.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  45.11
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= -2.12
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  -2.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  262.89
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 8.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 464.95
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  464.95
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  8.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 1077.97
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  1077.97
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 4.62
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 28.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- age >  28.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  4.62
+|   |   |   |   |   |   |   |   |   |--- num_credit_card <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 106.93
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  106.93
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- num_credit_card >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 195.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  195.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |--- monthly_inhand_salary <= 1661.41
+|   |   |   |   |   |   |   |   |--- num_credit_card <= 6.00
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 364.47
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 164.74
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  164.74
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  364.47
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- num_credit_card >  6.00
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 5.00
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 402.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  402.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  5.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- monthly_inhand_salary >  1661.41
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 6816.66
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 45.00
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 17.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  17.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  45.00
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1188.70
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1188.70
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  6816.66
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 4.50
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  4.50
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- interest_rate >  4.50
+|   |   |   |   |   |--- num_bank_accounts <= 2.50
+|   |   |   |   |   |   |--- delay_from_due_date <= 18.50
+|   |   |   |   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |   |   |   |--- annual_income <= 20311.58
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 19284.12
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 292.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  292.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |--- annual_income >  19284.12
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 1893.83
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  1893.83
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- annual_income >  20311.58
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 107.24
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 74.45
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 18
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  74.45
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  107.24
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 243.83
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  243.83
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 33.30
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 355.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 204.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  204.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  355.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 41.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- age >  41.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  33.30
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 517.21
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 2.63
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  2.63
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  517.21
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |--- delay_from_due_date >  18.50
+|   |   |   |   |   |   |   |--- interest_rate <= 15.00
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 307.52
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 16.52
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 33.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  33.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  16.52
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  307.52
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 10.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 582.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  582.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  10.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- interest_rate >  15.00
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- num_bank_accounts >  2.50
+|   |   |   |   |   |   |--- num_credit_card <= 7.50
+|   |   |   |   |   |   |   |--- interest_rate <= 12.50
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 11.97
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 184.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1423.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 21
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1423.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  184.50
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 26
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 25
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  11.97
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 566.79
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 12711.73
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 36
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  12711.73
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  566.79
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 8825.63
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  8825.63
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |--- interest_rate >  12.50
+|   |   |   |   |   |   |   |   |--- delay_from_due_date <= 35.50
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1254.68
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 283.42
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 34
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  283.42
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 22
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1254.68
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 28
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 19
+|   |   |   |   |   |   |   |   |--- delay_from_due_date >  35.50
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 33.76
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 323.72
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  323.72
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  33.76
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 38.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  38.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |--- num_credit_card >  7.50
+|   |   |   |   |   |   |   |--- credit_history_age <= 303.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 1141.70
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 88.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  88.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  1141.70
+|   |   |   |   |   |   |   |   |   |--- interest_rate <= 6.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- interest_rate >  6.00
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 79.72
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  79.72
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |--- credit_history_age >  303.50
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 35.62
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  35.62
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |--- interest_rate >  20.50
+|   |   |   |   |--- total_emi_per_month <= 539.72
+|   |   |   |   |   |--- num_bank_accounts <= 6.50
+|   |   |   |   |   |   |--- total_emi_per_month <= 306.50
+|   |   |   |   |   |   |   |--- age <= 44.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 1368.10
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 147.91
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 29.20
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  29.20
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  147.91
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 202.76
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  202.76
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  1368.10
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 79.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 73.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  73.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  79.50
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |--- age >  44.50
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 227.05
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 602.81
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 38.31
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  38.31
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  602.81
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  227.05
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 28.01
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  28.01
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 32.72
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  32.72
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- total_emi_per_month >  306.50
+|   |   |   |   |   |   |   |--- delay_from_due_date <= 9.50
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- delay_from_due_date >  9.50
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 8.50
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 32.84
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  32.84
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  8.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 163.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  163.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- num_bank_accounts >  6.50
+|   |   |   |   |   |   |--- monthly_inhand_salary <= 441.03
+|   |   |   |   |   |   |   |--- credit_history_age <= 203.50
+|   |   |   |   |   |   |   |   |--- monthly_balance <= 270.35
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- monthly_balance >  270.35
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 285.01
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  285.01
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- credit_history_age >  203.50
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- monthly_inhand_salary >  441.03
+|   |   |   |   |   |   |   |--- changed_credit_limit <= 0.55
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 1386.41
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 20.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 33.40
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  33.40
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  20.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  1386.41
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 0.44
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  0.44
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- changed_credit_limit >  0.55
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 25.05
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 5686.53
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 4771.27
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 20
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  4771.27
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  5686.53
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  25.05
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- total_emi_per_month >  539.72
+|   |   |   |   |   |--- amount_invested_monthly <= 595.86
+|   |   |   |   |   |   |--- credit_utilization_ratio <= 39.51
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- credit_utilization_ratio >  39.51
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- amount_invested_monthly >  595.86
+|   |   |   |   |   |   |--- class: 0
+|--- outstanding_debt >  1494.48
+|   |--- changed_credit_limit <= 14.98
+|   |   |--- interest_rate <= 14.50
+|   |   |   |--- num_of_delayed_payment <= 9.50
+|   |   |   |   |--- age <= 45.50
+|   |   |   |   |   |--- age <= 35.50
+|   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |--- num_of_delayed_payment <= 2.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 1497.41
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  1497.41
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- num_of_delayed_payment >  2.50
+|   |   |   |   |   |   |   |   |--- monthly_balance <= 253.98
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- monthly_balance >  253.98
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 40.02
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 24.10
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  24.10
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  40.02
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 41.16
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  41.16
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |--- credit_history_age <= 91.50
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 13.45
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 7.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  7.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  13.45
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 424.67
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  424.67
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- credit_history_age >  91.50
+|   |   |   |   |   |   |   |   |--- num_bank_accounts <= 6.50
+|   |   |   |   |   |   |   |   |   |--- age <= 27.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2582.49
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2582.49
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- age >  27.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 323.63
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  323.63
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- num_bank_accounts >  6.50
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 312.83
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 229.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  229.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  312.83
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- age >  35.50
+|   |   |   |   |   |   |--- outstanding_debt <= 2436.19
+|   |   |   |   |   |   |   |--- num_of_loan <= 6.50
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 4.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 218.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  218.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  4.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- num_of_loan >  6.50
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 99.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_history_age >  99.50
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 5.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  5.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- outstanding_debt >  2436.19
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- age >  45.50
+|   |   |   |   |   |--- class: 2
+|   |   |   |--- num_of_delayed_payment >  9.50
+|   |   |   |   |--- delay_from_due_date <= 2.50
+|   |   |   |   |   |--- amount_invested_monthly <= 26.45
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- amount_invested_monthly >  26.45
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- delay_from_due_date >  2.50
+|   |   |   |   |   |--- num_credit_inquiries <= 7.50
+|   |   |   |   |   |   |--- annual_income <= 75211.80
+|   |   |   |   |   |   |   |--- interest_rate <= 13.50
+|   |   |   |   |   |   |   |   |--- delay_from_due_date <= 5.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 227.00
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 12.29
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  12.29
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  227.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- delay_from_due_date >  5.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 186.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 758.94
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  758.94
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  186.50
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 14.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  14.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |--- interest_rate >  13.50
+|   |   |   |   |   |   |   |   |--- num_of_loan <= 5.00
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 88.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  88.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 7998.83
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  7998.83
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |--- num_of_loan >  5.00
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1878.46
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 17.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  17.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1878.46
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- annual_income >  75211.80
+|   |   |   |   |   |   |   |--- annual_income <= 80596.18
+|   |   |   |   |   |   |   |   |--- num_bank_accounts <= 6.50
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 13.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  13.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- num_bank_accounts >  6.50
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- annual_income >  80596.18
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 33.39
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 29.11
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  29.11
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  33.39
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- num_credit_inquiries >  7.50
+|   |   |   |   |   |   |--- delay_from_due_date <= 9.50
+|   |   |   |   |   |   |   |--- monthly_inhand_salary <= 2970.95
+|   |   |   |   |   |   |   |   |--- age <= 35.50
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 33.07
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 350.83
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  350.83
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  33.07
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 12.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  12.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- age >  35.50
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 67.38
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  67.38
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- monthly_inhand_salary >  2970.95
+|   |   |   |   |   |   |   |   |--- num_credit_card <= 5.00
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 20.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  20.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- num_credit_card >  5.00
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- delay_from_due_date >  9.50
+|   |   |   |   |   |   |   |--- credit_history_age <= 70.50
+|   |   |   |   |   |   |   |   |--- monthly_balance <= 298.89
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- monthly_balance >  298.89
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 320.94
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  320.94
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- credit_history_age >  70.50
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 218.50
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 22.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 226.04
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  226.04
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  22.50
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |--- credit_history_age >  218.50
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 14.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 33.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- age >  33.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  14.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 228.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  228.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |--- interest_rate >  14.50
+|   |   |   |--- total_emi_per_month <= 485.49
+|   |   |   |   |--- num_credit_inquiries <= 5.50
+|   |   |   |   |   |--- outstanding_debt <= 1516.17
+|   |   |   |   |   |   |--- outstanding_debt <= 1499.62
+|   |   |   |   |   |   |   |--- amount_invested_monthly <= 713.34
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- amount_invested_monthly >  713.34
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- outstanding_debt >  1499.62
+|   |   |   |   |   |   |   |--- credit_history_age <= 189.50
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- credit_history_age >  189.50
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- outstanding_debt >  1516.17
+|   |   |   |   |   |   |--- interest_rate <= 15.50
+|   |   |   |   |   |   |   |--- outstanding_debt <= 1593.95
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- outstanding_debt >  1593.95
+|   |   |   |   |   |   |   |   |--- num_of_loan <= 3.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 187.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 292.69
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  292.69
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  187.50
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 20.99
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  20.99
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- num_of_loan >  3.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- interest_rate >  15.50
+|   |   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |   |--- delay_from_due_date <= 24.50
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 2116.09
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 150.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  150.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  2116.09
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 23.83
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  23.83
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- delay_from_due_date >  24.50
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 8.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  8.50
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 34.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  34.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 14.50
+|   |   |   |   |   |   |   |   |   |--- age <= 41.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 40.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- age >  40.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- age >  41.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  14.50
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 14.88
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  14.88
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- num_credit_inquiries >  5.50
+|   |   |   |   |   |--- interest_rate <= 20.50
+|   |   |   |   |   |   |--- num_bank_accounts <= 5.50
+|   |   |   |   |   |   |   |--- total_emi_per_month <= 77.14
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 2586.57
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 26.02
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 9.36
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  9.36
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  26.02
+|   |   |   |   |   |   |   |   |   |   |--- num_of_loan <= 6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- num_of_loan >  6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  2586.57
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- total_emi_per_month >  77.14
+|   |   |   |   |   |   |   |   |--- age <= 32.50
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 26.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2315.40
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2315.40
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  26.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 54.46
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  54.46
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- age >  32.50
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 17643.42
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- annual_income >  17643.42
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 191.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  191.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |--- num_bank_accounts >  5.50
+|   |   |   |   |   |   |   |--- total_emi_per_month <= 415.83
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 28.80
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 11.50
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 45.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  45.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  11.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 111.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  111.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  28.80
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 11.18
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 37.91
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 22
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  37.91
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  11.18
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2595.67
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 20
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2595.67
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |--- total_emi_per_month >  415.83
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 2657.03
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  2657.03
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- interest_rate >  20.50
+|   |   |   |   |   |   |--- amount_invested_monthly <= 77.34
+|   |   |   |   |   |   |   |--- credit_history_age <= 243.50
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 6.50
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2110.15
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 2.91
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  2.91
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2110.15
+|   |   |   |   |   |   |   |   |   |   |--- num_of_loan <= 7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- num_of_loan >  7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries >  6.50
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 21.40
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 286.78
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  286.78
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  21.40
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 17.57
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  17.57
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 28
+|   |   |   |   |   |   |   |--- credit_history_age >  243.50
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 37.17
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  37.17
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- amount_invested_monthly >  77.34
+|   |   |   |   |   |   |   |--- changed_credit_limit <= 5.92
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 21.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 122.50
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 244.68
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  244.68
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  122.50
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 24
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  21.50
+|   |   |   |   |   |   |   |   |   |--- interest_rate <= 24.50
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 1.81
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  1.81
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- interest_rate >  24.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 243.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 18
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  243.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- changed_credit_limit >  5.92
+|   |   |   |   |   |   |   |   |--- annual_income <= 8837.56
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 244.00
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 33.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  33.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  244.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- annual_income >  8837.56
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2758.54
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 7.70
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 21
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  7.70
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 28
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2758.54
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 11.22
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  11.22
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |--- total_emi_per_month >  485.49
+|   |   |   |   |--- age <= 43.50
+|   |   |   |   |   |--- monthly_balance <= 143.58
+|   |   |   |   |   |   |--- age <= 22.50
+|   |   |   |   |   |   |   |--- delay_from_due_date <= 29.00
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- delay_from_due_date >  29.00
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 5240.72
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  5240.72
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- age >  22.50
+|   |   |   |   |   |   |   |--- amount_invested_monthly <= 611.01
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- amount_invested_monthly >  611.01
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- monthly_balance >  143.58
+|   |   |   |   |   |   |--- annual_income <= 60432.16
+|   |   |   |   |   |   |   |--- num_credit_inquiries <= 7.50
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- num_credit_inquiries >  7.50
+|   |   |   |   |   |   |   |   |--- monthly_balance <= 496.11
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 15.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  15.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- monthly_balance >  496.11
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- annual_income >  60432.16
+|   |   |   |   |   |   |   |--- age <= 24.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 2235.56
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  2235.56
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 36.83
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 25.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  25.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  36.83
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- age >  24.50
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 80.00
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 8.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  8.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_history_age >  80.00
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- age >  43.50
+|   |   |   |   |   |--- class: 0
+|   |--- changed_credit_limit >  14.98
+|   |   |--- outstanding_debt <= 2550.45
+|   |   |   |--- interest_rate <= 14.50
+|   |   |   |   |--- annual_income <= 18015.30
+|   |   |   |   |   |--- total_emi_per_month <= 20.62
+|   |   |   |   |   |   |--- amount_invested_monthly <= 50.34
+|   |   |   |   |   |   |   |--- changed_credit_limit <= 19.82
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- changed_credit_limit >  19.82
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- amount_invested_monthly >  50.34
+|   |   |   |   |   |   |   |--- num_credit_card <= 4.50
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- num_credit_card >  4.50
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 29.60
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 14.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  14.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  29.60
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 63.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  63.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 83.13
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  83.13
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- total_emi_per_month >  20.62
+|   |   |   |   |   |   |--- outstanding_debt <= 1573.35
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- outstanding_debt >  1573.35
+|   |   |   |   |   |   |   |--- total_emi_per_month <= 122.13
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 92.49
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 15.62
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 150.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  150.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  15.62
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 240.02
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  240.02
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  92.49
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 76.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  76.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- total_emi_per_month >  122.13
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 188.50
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- credit_history_age >  188.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- annual_income >  18015.30
+|   |   |   |   |   |--- annual_income <= 35011.61
+|   |   |   |   |   |   |--- total_emi_per_month <= 117.81
+|   |   |   |   |   |   |   |--- delay_from_due_date <= 20.50
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 77.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_history_age >  77.50
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 1378.44
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  1378.44
+|   |   |   |   |   |   |   |   |   |   |--- age <= 17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- age >  17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |--- delay_from_due_date >  20.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 1900.55
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 54.26
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  54.26
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 96.95
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  96.95
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  1900.55
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 285.55
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  285.55
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 28.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  28.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- total_emi_per_month >  117.81
+|   |   |   |   |   |   |   |--- credit_history_age <= 181.50
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- credit_history_age >  181.50
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- annual_income >  35011.61
+|   |   |   |   |   |   |--- num_credit_inquiries <= 10.50
+|   |   |   |   |   |   |   |--- total_emi_per_month <= 212.60
+|   |   |   |   |   |   |   |   |--- age <= 17.50
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 130.92
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  130.92
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 219.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  219.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- age >  17.50
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 13.50
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 1967.70
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  1967.70
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  13.50
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 13.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  13.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- total_emi_per_month >  212.60
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 4998.26
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 18.78
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  18.78
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  4998.26
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 18.52
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  18.52
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 21.44
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  21.44
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- num_credit_inquiries >  10.50
+|   |   |   |   |   |   |   |--- annual_income <= 38861.73
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 244.39
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  244.39
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- annual_income >  38861.73
+|   |   |   |   |   |   |   |   |--- monthly_balance <= 562.10
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- monthly_balance >  562.10
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |--- interest_rate >  14.50
+|   |   |   |   |--- num_of_loan <= 7.50
+|   |   |   |   |   |--- interest_rate <= 19.50
+|   |   |   |   |   |   |--- delay_from_due_date <= 20.50
+|   |   |   |   |   |   |   |--- total_emi_per_month <= 78.87
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 46.33
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2259.18
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 18.20
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  18.20
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2259.18
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 26.54
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  26.54
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  46.33
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 41.46
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 662.16
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  662.16
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  41.46
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- total_emi_per_month >  78.87
+|   |   |   |   |   |   |   |   |--- age <= 34.50
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 8.50
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 18.65
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  18.65
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  8.50
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- age >  34.50
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 484.81
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 40.34
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  40.34
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  484.81
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- delay_from_due_date >  20.50
+|   |   |   |   |   |   |   |--- outstanding_debt <= 2380.58
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 4260.72
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 39955.82
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 90.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  90.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- annual_income >  39955.82
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  4260.72
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 22.36
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 277.40
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  277.40
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  22.36
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- outstanding_debt >  2380.58
+|   |   |   |   |   |   |   |   |--- num_bank_accounts <= 4.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 107.00
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  107.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- num_bank_accounts >  4.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 47.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  47.00
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 35.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  35.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |--- interest_rate >  19.50
+|   |   |   |   |   |   |--- age <= 17.50
+|   |   |   |   |   |   |   |--- interest_rate <= 20.50
+|   |   |   |   |   |   |   |   |--- credit_history_age <= 129.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_history_age >  129.50
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- interest_rate >  20.50
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 7.50
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 234.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 65.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  65.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  234.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries >  7.50
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 22.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 161.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  161.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  22.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- age >  17.50
+|   |   |   |   |   |   |   |--- monthly_inhand_salary <= 355.87
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 29.59
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  29.59
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- monthly_inhand_salary >  355.87
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 12.50
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 15.68
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 8195.63
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  8195.63
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  15.68
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 34.84
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 17
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  34.84
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 22
+|   |   |   |   |   |   |   |   |--- num_credit_inquiries >  12.50
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 195.51
+|   |   |   |   |   |   |   |   |   |   |--- age <= 43.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |   |   |--- age >  43.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  195.51
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 369.52
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  369.52
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |--- num_of_loan >  7.50
+|   |   |   |   |   |--- delay_from_due_date <= 54.50
+|   |   |   |   |   |   |--- outstanding_debt <= 2543.58
+|   |   |   |   |   |   |   |--- amount_invested_monthly <= 29.02
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- amount_invested_monthly >  29.02
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 16.00
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  16.00
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- outstanding_debt >  2543.58
+|   |   |   |   |   |   |   |--- credit_history_age <= 83.50
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- credit_history_age >  83.50
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- delay_from_due_date >  54.50
+|   |   |   |   |   |   |--- credit_history_age <= 140.50
+|   |   |   |   |   |   |   |--- delay_from_due_date <= 60.00
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- delay_from_due_date >  60.00
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- credit_history_age >  140.50
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |--- outstanding_debt >  2550.45
+|   |   |   |--- credit_history_age <= 182.50
+|   |   |   |   |--- interest_rate <= 24.50
+|   |   |   |   |   |--- total_emi_per_month <= 756.34
+|   |   |   |   |   |   |--- monthly_inhand_salary <= 1739.01
+|   |   |   |   |   |   |   |--- changed_credit_limit <= 27.20
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 71.48
+|   |   |   |   |   |   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |   |   |   |   |   |--- num_of_loan <= 7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- num_of_loan >  7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 7633.48
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  7633.48
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  71.48
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 3163.64
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 166.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  166.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  3163.64
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 20.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  20.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |--- changed_credit_limit >  27.20
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 90.67
+|   |   |   |   |   |   |   |   |   |--- age <= 44.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 19887.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  19887.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- age >  44.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 199.98
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  199.98
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  90.67
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 1482.82
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 27.78
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  27.78
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  1482.82
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 5107.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  5107.12
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- monthly_inhand_salary >  1739.01
+|   |   |   |   |   |   |   |--- credit_history_age <= 161.50
+|   |   |   |   |   |   |   |   |--- total_emi_per_month <= 160.10
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 12.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 30.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- age >  30.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  12.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 31.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- age >  31.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |--- total_emi_per_month >  160.10
+|   |   |   |   |   |   |   |   |   |--- age <= 15.50
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card <= 5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card >  5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- age >  15.50
+|   |   |   |   |   |   |   |   |   |   |--- age <= 43.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 24
+|   |   |   |   |   |   |   |   |   |   |--- age >  43.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |--- credit_history_age >  161.50
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 1837.80
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 234.20
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card <= 9.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_card >  9.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  234.20
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  1837.80
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month <= 244.76
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 45.33
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  45.33
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- total_emi_per_month >  244.76
+|   |   |   |   |   |   |   |   |   |   |--- age <= 24.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- age >  24.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |--- total_emi_per_month >  756.34
+|   |   |   |   |   |   |--- monthly_inhand_salary <= 5737.29
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- monthly_inhand_salary >  5737.29
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- interest_rate >  24.50
+|   |   |   |   |   |--- changed_credit_limit <= 17.68
+|   |   |   |   |   |   |--- changed_credit_limit <= 16.47
+|   |   |   |   |   |   |   |--- outstanding_debt <= 2590.73
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 35.42
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  35.42
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 81.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  81.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 385.81
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  385.81
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- outstanding_debt >  2590.73
+|   |   |   |   |   |   |   |   |--- delay_from_due_date <= 49.50
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 429.47
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 173.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  173.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  429.47
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 4519.65
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  4519.65
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- delay_from_due_date >  49.50
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 9.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 9164.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  9164.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  9.50
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 39.66
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  39.66
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- changed_credit_limit >  16.47
+|   |   |   |   |   |   |   |--- total_emi_per_month <= 226.04
+|   |   |   |   |   |   |   |   |--- delay_from_due_date <= 50.50
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 4171.26
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 1437.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  1437.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  4171.26
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 4650.42
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  4650.42
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |--- delay_from_due_date >  50.50
+|   |   |   |   |   |   |   |   |   |--- age <= 36.00
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 170.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  170.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- age >  36.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- total_emi_per_month >  226.04
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 17.48
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2768.67
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2768.67
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 151.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  151.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  17.48
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 9.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  9.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- changed_credit_limit >  17.68
+|   |   |   |   |   |   |--- monthly_inhand_salary <= 661.96
+|   |   |   |   |   |   |   |--- credit_history_age <= 51.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 4479.63
+|   |   |   |   |   |   |   |   |   |--- monthly_balance <= 283.00
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 38.77
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- amount_invested_monthly >  38.77
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- monthly_balance >  283.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  4479.63
+|   |   |   |   |   |   |   |   |   |--- interest_rate <= 31.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- interest_rate >  31.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- credit_history_age >  51.50
+|   |   |   |   |   |   |   |   |--- outstanding_debt <= 4976.28
+|   |   |   |   |   |   |   |   |   |--- annual_income <= 9957.10
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 374.51
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  374.51
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- annual_income >  9957.10
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 3653.85
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- outstanding_debt >  3653.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- outstanding_debt >  4976.28
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment <= 21.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_of_delayed_payment >  21.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- monthly_inhand_salary >  661.96
+|   |   |   |   |   |   |   |--- monthly_inhand_salary <= 784.48
+|   |   |   |   |   |   |   |   |--- annual_income <= 9559.17
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt <= 2561.94
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 160.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  160.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- outstanding_debt >  2561.94
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate <= 33.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- interest_rate >  33.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- annual_income >  9559.17
+|   |   |   |   |   |   |   |   |   |--- interest_rate <= 31.50
+|   |   |   |   |   |   |   |   |   |   |--- annual_income <= 10427.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- annual_income >  10427.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- interest_rate >  31.50
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 26.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  26.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |--- monthly_inhand_salary >  784.48
+|   |   |   |   |   |   |   |   |--- changed_credit_limit <= 23.16
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 160.50
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance <= 330.66
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 20
+|   |   |   |   |   |   |   |   |   |   |--- monthly_balance >  330.66
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  160.50
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts <= 5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- num_bank_accounts >  5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |--- changed_credit_limit >  23.16
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 25.11
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 58.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 17
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  58.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  25.11
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date <= 19.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- delay_from_due_date >  19.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 19
+|   |   |   |--- credit_history_age >  182.50
+|   |   |   |   |--- interest_rate <= 6.50
+|   |   |   |   |   |--- num_credit_card <= 6.00
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- num_credit_card >  6.00
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- interest_rate >  6.50
+|   |   |   |   |   |--- amount_invested_monthly <= 82.47
+|   |   |   |   |   |   |--- age <= 42.50
+|   |   |   |   |   |   |   |--- annual_income <= 46852.65
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly <= 23.15
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 27.54
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  27.54
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- amount_invested_monthly >  23.15
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit <= 25.57
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age <= 184.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- credit_history_age >  184.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |--- changed_credit_limit >  25.57
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- annual_income >  46852.65
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary <= 4829.74
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- monthly_inhand_salary >  4829.74
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 29.54
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  29.54
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- age >  42.50
+|   |   |   |   |   |   |   |--- monthly_balance <= 466.28
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- monthly_balance >  466.28
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- amount_invested_monthly >  82.47
+|   |   |   |   |   |   |--- num_of_delayed_payment <= 21.50
+|   |   |   |   |   |   |   |--- age <= 45.50
+|   |   |   |   |   |   |   |   |--- annual_income <= 8282.03
+|   |   |   |   |   |   |   |   |   |--- credit_history_age <= 212.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- credit_history_age >  212.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- annual_income >  8282.03
+|   |   |   |   |   |   |   |   |   |--- num_credit_card <= 4.50
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries <= 8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- num_credit_inquiries >  8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- num_credit_card >  4.50
+|   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- age >  45.50
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio <= 31.17
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- credit_utilization_ratio >  31.17
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- num_of_delayed_payment >  21.50
+|   |   |   |   |   |   |   |--- monthly_balance <= 303.69
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- monthly_balance >  303.69
+|   |   |   |   |   |   |   |   |--- age <= 35.50
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- age >  35.50
+|   |   |   |   |   |   |   |   |   |--- class: 0
+

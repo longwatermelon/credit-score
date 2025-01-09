@@ -1,0 +1,35 @@
+Accuracy of the Decision Tree (test): 0.7472
+Accuracy of the Decision Tree (train): 1.0
+Feature Importances:
+                      Feature  Importance
+14          outstanding_debt    0.167256
+13                credit_mix    0.117241
+16        credit_history_age    0.080536
+15  credit_utilization_ratio    0.057127
+9        delay_from_due_date    0.056034
+20           monthly_balance    0.052462
+11      changed_credit_limit    0.051920
+7              interest_rate    0.049446
+18   amount_invested_monthly    0.048621
+0                        age    0.037914
+4        total_emi_per_month    0.036563
+3      monthly_inhand_salary    0.034227
+10    num_of_delayed_payment    0.033299
+2              annual_income    0.025157
+6            num_credit_card    0.025138
+12      num_credit_inquiries    0.022906
+1                 occupation    0.021726
+19         payment_behaviour    0.017212
+5          num_bank_accounts    0.016451
+8                num_of_loan    0.009552
+17     payment_of_min_amount    0.005821
+25             Mortgage Loan    0.004465
+24          Home Equity Loan    0.004303
+29             Personal Loan    0.003901
+27             Not Specified    0.003817
+28               Payday Loan    0.003688
+22       Credit-Builder Loan    0.003588
+30              Student Loan    0.003575
+21                 Auto Loan    0.002704
+23   Debt Consolidation Loan    0.002263
+26                   No Loan    0.001087
